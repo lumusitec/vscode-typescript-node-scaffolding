@@ -1,0 +1,28 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "diagnostics": false,
+        "experimentalDecorators": true,
+        "listFiles": true,
+        "allowUnreachableCode": false,
+        "allowJs": false,
+        "allowSyntheticDefaultImports": false,
+        "allowUnusedLabels": false,
+        "noImplicitUseStrict": false,
+        "noImplicitAny": true,
+        "forceConsistentCasingInFileNames": true,
+        "inlineSourceMap": false,
+        "inlineSources": false,
+        "locale": "en-us",
+        "sourceMap": true,
+        "module": "commonjs",
+        "outDir": "build",
+        "target": "es5",
+        "removeComments": true,
+        "moduleResolution": "node"
+    },
+    "exclude": [
+        "node_modules",
+        "build"
+    ]
+}

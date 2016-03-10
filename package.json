@@ -1,0 +1,24 @@
+{
+  "name": "nodejs-typescript-vscode-scaffolding",
+  "version": "1.0.0",
+  "description": "Visual Studio Code Typescript Scaffolding Project for NodeJS",
+  "main": "./build/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "tslint": "^3.5.0",
+    "typescript": "^1.8.7"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tsc -p .",
+    "test": "./node_module/.bin/mocha"
+  },
+  "keywords": [
+    "VSCode",
+    "Visual Studio Code",
+    "Scaffolding",
+    "Typescript",
+    "tsconfig"
+  ],
+  "author": "Tom Pennetta <tpennetta@gmail.com>",
+  "license": "ISC"
+}
