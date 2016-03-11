@@ -21,9 +21,56 @@
   "tasks": [
     {
       "taskName": "build",
-      "args": ["build"],
-      "problemMatcher": "$tsc",
+      "args": ["build" ],
+      "problemMatcher": {
+        "base": "$tsc",
+        "fileLocation": "relative"
+      },
       "isBuildCommand": true
+    },
+    {
+      "taskName": "test",
+      "args": [ "test" ],
+      "showOutput": "always",
+      "problemMatcher": {
+        "fileLocation": "absolute",
+        "pattern": [
+          {
+            "regexp": "^\\s*\\d+\\)\\s+(.+):$",
+            "message": 1
+          },
+          {
+            "regexp": "^\\s+.*$"
+          },
+          {
+            "regexp": "^\\s+.*$"
+          },
+          {
+            "regexp": "^\\s+.*$"
+          },
+          {
+            "regexp": "^\\s+.*$"
+          },
+          {
+            "regexp": "^\\s+.*$"
+          },
+          {
+            "regexp": "\\s+at\\s(.*)\\s\\((.*?:.*?):(\\d+):(\\d+)\\)",
+            "file": 2,
+            "line": 3,
+            "column": 4
+          }
+        ]
+      },
+      "isBuildCommand": false,
+      "isTestCommand": true
+    },
+    {
+      "taskName": "clean",
+      "args": ["clean"],
+      "showOutput": "silent",
+      "isBuildCommand": false,
+      "isTestCommand": false
     }
   ]
 }
