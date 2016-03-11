@@ -1,28 +1,36 @@
 {
-    "compileOnSave": true,
-    "compilerOptions": {
-        "diagnostics": false,
-        "experimentalDecorators": true,
-        "listFiles": true,
-        "allowUnreachableCode": false,
-        "allowJs": false,
-        "allowSyntheticDefaultImports": false,
-        "allowUnusedLabels": false,
-        "noImplicitUseStrict": false,
-        "noImplicitAny": true,
-        "forceConsistentCasingInFileNames": true,
-        "inlineSourceMap": false,
-        "inlineSources": false,
-        "locale": "en-us",
-        "sourceMap": true,
-        "module": "commonjs",
-        "outDir": "build",
-        "target": "es5",
-        "removeComments": true,
-        "moduleResolution": "node"
-    },
-    "exclude": [
-        "node_modules",
-        "build"
-    ]
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "declaration": true,
+    "diagnostics": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "isolatedModules": false,
+    "listFiles": true,
+    "locale": "en-us",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitUseStrict": false,
+    "noImplicitAny": true,
+    "noLib": false,
+    "outDir": "build",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "typings/browser",
+    "typings/browser.d.ts",
+    "typings/main"
+  ]
 }

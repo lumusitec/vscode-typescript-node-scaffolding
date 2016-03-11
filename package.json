@@ -3,14 +3,28 @@
   "version": "1.0.0",
   "description": "Visual Studio Code Typescript Scaffolding Project for NodeJS",
   "main": "./build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tpennetta/vscode-typescript-node-scaffolding.git"
+  },
+  "engines": {
+    "node": ">=0.10.36"
+  },
   "dependencies": {},
   "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^2.3.0",
+    "mocha": "^2.4.5",
     "tslint": "^3.5.0",
-    "typescript": "^1.8.7"
+    "typescript": "^1.8.7",
+    "typings": "^0.7.7"
   },
   "scripts": {
+    "postinstall": "typings install",
     "build": "./node_modules/.bin/tsc -p .",
-    "test": "./node_module/.bin/mocha"
+    "pretest": "./node_modules/.bin/tsc -p .",
+    "test": "./node_modules/.bin/mocha --check-leaks --recursive build/test",
+    "clean": "rm -rf build/*"
   },
   "keywords": [
     "VSCode",
@@ -20,5 +34,5 @@
     "tsconfig"
   ],
   "author": "Tom Pennetta <tpennetta@gmail.com>",
-  "license": "ISC"
+  "license": "MIT"
 }

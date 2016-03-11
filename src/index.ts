@@ -1,6 +1,5 @@
-class Startup {
-    public static main(): number {
-        console.log("Hello world");
-        return 0;
-    }
+export default class HelloWorld {
+  public hello(): string {
+    return "Hello world";
+  }
 } // Test
