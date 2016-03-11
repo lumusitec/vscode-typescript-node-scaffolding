@@ -189,5 +189,5 @@ your needs. There are pre-built `scripts` which serve as a base for _VS Code Tas
 
 ## TODOs
 
-- [] More elegant directory structure for the build directory then an additional `src` directory next to `test`.
-- [] Decouple the `Build` and `Task` _NPM Scripts_ and `tasks.json`.
+- [ ] More elegant directory structure for the build directory then an additional `src` directory next to `test`.
+- [ ] Decouple the `Build` and `Task` _NPM Scripts_ and `tasks.json`.
