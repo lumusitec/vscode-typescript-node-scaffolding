@@ -51,12 +51,36 @@ Documentation on _Tasks_ can be found here:
 
 ### Build/Compile Source
 
+To build the Typescript source files from the `./src` and `./test` directory to the `./build`
+directory with the same directory structure.
+
 `⇧+⌘+B`
 
 ### Run Test
 
+To run the mocha test runner and output results to the _OUTPUT_ console. This has a `pretest`
+script in the `package.json` which runs the normal build command, to compile `.ts` files to
+`.js`.
+
 `⇧+⌘+T`
+
+### Task Runners
+
+This scaffolding has been developes for as few dependencies as possible. While it is an accepted
+standard to use _Gulp_ or _Grunt_ for defining test runner tasks, we rely on `NPM-scripts` and
+`VS Code tasks`.
+
+Tasks are defined in the `./.vscode/tasks.json` file. For information on _VS Code Task Definitions_
+refer to the documentation here:
+
+[https://code.visualstudio.com/docs/editor/tasks](https://code.visualstudio.com/docs/editor/tasks)
 
 ## Resources
 
+### Directory Structure
+
 ### Dependencies
+
+## TODOs
+
+- More elegant directory structure for the build directory then an additional `src` directory next to `test`.

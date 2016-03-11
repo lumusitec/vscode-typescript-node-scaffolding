@@ -23,7 +23,7 @@
     "postinstall": "typings install",
     "build": "./node_modules/.bin/tsc -p .",
     "pretest": "./node_modules/.bin/tsc -p .",
-    "test": "./node_modules/.bin/mocha --check-leaks --recursive build/test",
+    "test": "./node_modules/.bin/mocha build/test",
     "clean": "rm -rf build/*"
   },
   "keywords": [
