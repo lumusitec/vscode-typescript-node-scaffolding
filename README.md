@@ -72,9 +72,10 @@ script in the `package.json` which runs the normal build command, to compile `.t
 
 ### Task Runners
 
-This scaffolding has been developes for as few dependencies as possible. While it is an accepted
+This scaffolding has been developed for as few dependencies as possible. While it is an accepted
 standard to use _Gulp_ or _Grunt_ for defining test runner tasks, we rely on `NPM-scripts` and
-`VS Code tasks`.
+`VS Code tasks`. These built-in tools can accomplish all of what can be accomplish using other
+third-party task runners.
 
 Tasks are defined in the `./.vscode/tasks.json` file. For information on _VS Code Task Definitions_
 refer to the documentation here:
