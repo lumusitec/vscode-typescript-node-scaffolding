@@ -7,6 +7,8 @@ be a bit confusing when using Visual Studio Code as your IDE. VS Code is an
 extremely powerful tool, and after a proper foundation of project scaffolding,
 development can be streamlined utilizing these tools.
 
+------------------------------------------------------------------------------
+
 ## Installation
 
 ### 1. Clone this Repo
@@ -23,6 +25,8 @@ under Resources -> Dependencies.
 
 To insall the necessary/required dependencies, run the following from the root
 of your cloned repo directory.
+
+------------------------------------------------------------------------------
 
 ## Configuration
 
@@ -46,6 +50,8 @@ To customize the behavior of these tasks, refer to the following file:
 
 Documentation on _Tasks_ can be found here:
 [https://code.visualstudio.com/docs/editor/tasks](https://code.visualstudio.com/docs/editor/tasks)
+
+------------------------------------------------------------------------------
 
 ## Usage
 
@@ -75,12 +81,112 @@ refer to the documentation here:
 
 [https://code.visualstudio.com/docs/editor/tasks](https://code.visualstudio.com/docs/editor/tasks)
 
+------------------------------------------------------------------------------
+
 ## Resources
 
 ### Directory Structure
 
+```
+.
+├── build/
+├── src/
+│   └── index.ts
+├── test/
+│   ├── index.spec.ts
+│   └── mocha.opts
+├── typings/
+│   ├── main/
+│   │   └── ambient/
+│   │       ├── chai/
+│   │       │   └── index.d.ts
+│   │       ├── mocha/
+│   │       │   └── index.d.ts
+│   │       └── node/
+│   │           └── index.d.ts
+│   └── main.d.ts
+├── README.md
+├── package.json
+├── tsconfig.json
+└── typings.json
+```
+
+#### build/
+
+Destination compilation target directory for `.js` files. This is where the _Build_ command will save
+compiled `.ts`->`.js` files.
+
+#### src/
+
+Source directory containing application Typescript files. Here you will find a sample _Hello World_
+Typescript file as an example.
+
+#### test/
+
+Test directory containing Typescript `.ts` files which implement test runners. In this scaffolding,
+we are using [_Mocha_](https://mochajs.org/) and optionally [_Chai_](http://chaijs.com/). There is
+an included _Hello World_ unit test in place as an example.
+
+#### typings/
+
+In order for Intellisense to work as expected, any external Javascript modules referred to within your
+project needs a corresponding _Typescript Definition File_ `*.d.ts`. These files describe the shape
+of the dependent module(s). More information on Typescript Definition Files can be found here:
+
+[http://www.typescriptlang.org/Handbook#modules-working-with-other-javascript-libraries](http://www.typescriptlang.org/Handbook#modules-working-with-other-javascript-libraries)
+
+These definition files are managed by a _Typescript Definition File Manager_ called _Typings_. This is
+the successor to the previous CLI command `tsd`. For more information on _Typings_ see here:
+
+[https://github.com/typings/typings](https://github.com/typings/typings)
+
+The pre-installed _typings_ are:
+- Node Core
+- Mocha Testing Framework
+- Chai Assertion Library.
+
+These are installed as _ambient_ definitions, and can be referenced from the `main.d.ts` file located
+in:
+
+`./typings/main.d.ts`
+
+So when referencing you definition files, you can include at the top of your `src` files:
+
+```
+/// <reference path="../typings/main.d.ts" />
+```
+
+#### README.md
+
+You are here
+
+#### package.json
+
+_NPM_ package information for the project. Here is where you can customize the project configs to suit
+your needs. There are pre-built `scripts` which serve as a base for _VS Code Tasks_ to run `build`,
+`test`, and `clean` tasks.
+
 ### Dependencies
+
+```
+├── chai@3.5.0
+├── eslint@2.3.0
+├── mocha@2.4.5
+├── tslint@3.5.0
+├── typescript@1.8.7
+└── typings@0.7.7
+```
+
+- Chai - Assertion testing library.
+- ESLint - Style checking for Javascript files.
+- Mocha - Testing framework.
+- TSLint - Style checking for Typescript files.
+- Typescript - Local copy of Typescript compiler.
+- Typings - Typescript definition file `*.d.ts` management tool.
+
+------------------------------------------------------------------------------
 
 ## TODOs
 
-- More elegant directory structure for the build directory then an additional `src` directory next to `test`.
+- [] More elegant directory structure for the build directory then an additional `src` directory next to `test`.
+- [] Decouple the `Build` and `Task` _NPM Scripts_ and `tasks.json`.
